@@ -6,11 +6,11 @@ class Solution {
 
        int longest =0;
 
-        for(int num : set){//traverse the set
-           if(!set.contains(num-1)){//start of a sequence
-           int current = num;//store num 
-           int length = 1;// as till now one element is been considered
-           while(set.contains(current+1)){//include the preceeding elements
+        for(int num : set){
+           if(!set.contains(num-1)){
+           int current = num;
+           int length = 1;
+           while(set.contains(current+1)){
                 length++;
                 current++;
            }
