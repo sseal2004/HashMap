@@ -3,13 +3,12 @@ class Solution {
         Map<String,List<String>>map =  new HashMap<>();
         for(String w:strs){
             char[]arr= w.toCharArray();
-            //because all the anagrams becomes same after sorting
             Arrays.sort(arr);
-            String s = new String(arr); //sorted word from arr added
+            String s = new String(arr); 
             if(!map.containsKey(s)){
-            map.put(s,new ArrayList<>());//add the word into map 
+            map.put(s,new ArrayList<>());
             }
-            map.get(s).add(w); //fetch those word from map and add them to list
+            map.get(s).add(w); 
              
         }
         return new ArrayList<>(map.values());
